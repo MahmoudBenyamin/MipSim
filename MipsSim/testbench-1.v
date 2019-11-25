@@ -20,7 +20,8 @@ module testbench ();
     //  mips.jump_taken=0;
       mips.pc=0;
      mips.reg_file[28]=32'h00000000;//initializing $gp
-  
+		mips.reg_file[29]=32000;;//initializing $sp
+		mips.reg_file[30]=32'h00000000;//initializing $fp
       forever
         begin
         #5 clk1=1; #5clk1=0;//2phase clk
